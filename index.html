@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="require.js"></script>
+</head>
+<body>
+<script>
+    //Callback functions
+	
+    var error = function (err, response, body) {
+        console.log('ERROR [%s]', err);
+    };
+    var success = function (data) {
+        console.log('Data [%s]', data);
+    };
+
+    var Twitter = require('twitter-js-client').Twitter;
+
+    //Get this data from your twitter apps dashboard
+    var config = {
+        "consumerKey": "vGoNAS4yuEyDc5neChi0EwuUo",
+        "consumerSecret": "4fiOjbjif7ymabMG0s9HODfy3FBqqrXUFhiBCgl6gEm8K04fSO",
+        "accessToken": "2908560496-O0YY6uFInRlAiRv9SaEbi8WzWJvegjJUvbDll",
+        "accessTokenSecret": "YM0zBjobFALfUdI5b3xdQN4iiQj50OA4YH0le7YP4A2Wl",
+        "callBackUrl": "http://aprilmaycarter.github.io/"
+    }
+	
+    var twitter = new Twitter(config);
+    document.body.innerHTML+= "testdata";
+</script>
+</body>
+</html>
